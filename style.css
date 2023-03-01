@@ -36,10 +36,9 @@ padding: 1em;
 display: flex;
 flex-direction: column;
 height: 100%;
-width: auto;
 align-items: center;
 justify-content: center;
 background-image: backgr();
 background-repeat: no-repeat;
-background-size: 1920 1200;
+background-size: cover;
 }
