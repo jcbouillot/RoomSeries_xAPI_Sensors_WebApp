@@ -40,5 +40,5 @@ align-items: center;
 justify-content: center;
 background-image: backgr();
 background-repeat: no-repeat;
-background-size: contain;
+background-size: 1920px 1200px;
 }
