@@ -36,6 +36,7 @@ padding: 1em;
 display: flex;
 flex-direction: column;
 height: 100%;
+width: auto;
 align-items: center;
 justify-content: center;
 background-image: backgr();
