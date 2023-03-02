@@ -41,6 +41,7 @@ justify-content: center;
 overflow-y: hidden ! important;
 overflow-x: hidden ! important;
 background-image: backgr();
-background-size: contain;
+background-position: center;
 background-repeat: no-repeat;
+background-size: cover;
 }
