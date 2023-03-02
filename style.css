@@ -38,6 +38,11 @@ flex-direction: column;
 height: 100%;
 align-items: center;
 justify-content: center;
+overflow-y: hidden ! important;
+overflow-x: hidden ! important;
 background-image: backgr();
+/*background-size: cover;*/
+background-size: contain;
 background-repeat: no-repeat;
+background-position: left;
 }
