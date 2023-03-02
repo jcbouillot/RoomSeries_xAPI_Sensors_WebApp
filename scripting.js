@@ -1,16 +1,29 @@
-function backgr(){
-    var backimg = ["./images/webex_night.jpg","./images/webex_dark.jpg","./images/webex_afternoon.jpg","./images/webex_morning.jpg","./images/webex_spiral1.jpg","./images/webex_spiral2.jpg","./images/webex_spiral3.jpg","./images/webex_spiral4.jpg"];
-    var randimg =Math.floor(Math.random()*8);
-    document.body.background = backimg[randimg];
-    }
+$(document).ready(function(){
 
-function getData() {
-    var settings = {
-        url: "https://webexapis.com/v1/xapi/status?deviceId=Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL0RFVklDRS8zZTkzZWQ1Ni0yZTBhLTRiMGQtODcwMi0wNTE3OTcxNjhlYWY&name=*.*",
-        method: "GET",
-        timeout: 0,
-        headers: {Authorization: "Bearer YjU1NWY0YjEtNWU0Yi00YmEzLWJiMWMtYmI4NDQyMWY2NWRjMDE1ODgyOGEtODBj_P0A1_3f583651-ecd1-49e2-bf45-cf75e5f54d08",},
-    };
+    const imgOne = './images/webex_dark.jpg';
+    const imgTwo = './images/webex_night.jpg';
+    const imgThree = './images/webex_afternoon.jpg';
+  
+    const imgArray = [imgOne, imgTwo, imgThree];
+    
+    $('.bg-img').css('background-image', 'url(' + imgArray[0] + ')');
+    
+    let interval = 0;
+    
+    setInterval(function(){
+      
+      if (interval < (imgArray.length - 1)) {
+          interval++;
+      } else {
+          interval = 0;
+      }
+      
+      $('.bg-img').css('background-image', 'url(' + imgArray[interval] + ')');
+    
+    }, 4000);
+    
+  });
+
 
     $.ajax(settings).done(function (response) {
         var AmbientNoise = response.result.RoomAnalytics.AmbientNoise.Level.A;
