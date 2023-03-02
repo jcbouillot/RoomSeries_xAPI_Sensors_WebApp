@@ -3,8 +3,13 @@ $(document).ready(function(){
     const imgOne = './images/webex_dark.jpg';
     const imgTwo = './images/webex_night.jpg';
     const imgThree = './images/webex_afternoon.jpg';
+    const imgFour = './images/webex_morning.jpg';
+    const imgFive = './images/webex_spiral1.jpg';
+    const imgSix = './images/webex_spiral2.jpg';
+    const imgSeven = './images/webex_spiral3.jpg';
+    const imgEight = './images/webex_spiral4.jpg';
   
-    const imgArray = [imgOne, imgTwo, imgThree];
+    const imgArray = [imgOne, imgTwo, imgThree, imgFour, imgFive, imgSix, imgSeven, imgEight];
     
     $('.bg-img').css('background-image', 'url(' + imgArray[0] + ')');
     
@@ -20,7 +25,7 @@ $(document).ready(function(){
       
       $('.bg-img').css('background-image', 'url(' + imgArray[interval] + ')');
     
-    }, 4000);
+    }, 10000);
     
   });
 
