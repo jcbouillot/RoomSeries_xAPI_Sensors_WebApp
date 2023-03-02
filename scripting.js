@@ -31,7 +31,7 @@ function getData() {
         $("#AmbientNoise").html(AmbientNoise + " dBA");
         $("#SoundLevel").html(SoundLevel + " dBA");
         $("#RT60").html(RT60 / 1000 + "s");
-        $("#PeoplePresence").html(PeoplePresence);
+        $("#PeoplePresence").html(PeoplePresence == "Yes" ? "In use" : PeoplePresence);
         $("#Current").html(Current);
         $("#Capacity").html(Capacity);
         $("#Name").html(Name);
