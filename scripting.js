@@ -24,6 +24,13 @@ $(document).ready(function(){
     
   });
 
+function getData() {
+    var settings = {
+        url: "https://webexapis.com/v1/xapi/status?deviceId=Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL0RFVklDRS8zZTkzZWQ1Ni0yZTBhLTRiMGQtODcwMi0wNTE3OTcxNjhlYWY&name=*.*",
+        method: "GET",
+        timeout: 0,
+        headers: {Authorization: "Bearer YjU1NWY0YjEtNWU0Yi00YmEzLWJiMWMtYmI4NDQyMWY2NWRjMDE1ODgyOGEtODBj_P0A1_3f583651-ecd1-49e2-bf45-cf75e5f54d08",},
+    };
 
     $.ajax(settings).done(function (response) {
         var AmbientNoise = response.result.RoomAnalytics.AmbientNoise.Level.A;
@@ -51,11 +58,12 @@ $(document).ready(function(){
         $("#Humidity").html(Humidity);
         $("#Temperature").html(Temperature);
         $("#AirQuality").html(AirQualityIndex);
-        $("#BookingStatus").html(BookingStatus);
+        $("#BookingStatus").html(BookingStatus == "BookedUntil" ? "Booked Until" : BookingStatus);
         $("#BookingTime").html(BookingTime);
         $("#Software").html(Software);
         $("#ReleaseDate").html(ReleaseDate);
     });
+    
 }
 
 //Getting data immediately, just once
