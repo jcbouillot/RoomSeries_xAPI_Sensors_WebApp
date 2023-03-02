@@ -41,8 +41,6 @@ justify-content: center;
 overflow-y: hidden ! important;
 overflow-x: hidden ! important;
 background-image: backgr();
-/*background-size: cover;*/
-background-size: 1920px 1200px;
+background-size: contain;
 background-repeat: no-repeat;
-background-position: left;
 }
