@@ -42,7 +42,7 @@ overflow-y: hidden ! important;
 overflow-x: hidden ! important;
 background-image: backgr();
 /*background-size: cover;*/
-background-size: contain;
+background-size: 1920px 1200px;
 background-repeat: no-repeat;
 background-position: left;
 }
