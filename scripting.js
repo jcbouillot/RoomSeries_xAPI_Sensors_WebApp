@@ -63,7 +63,7 @@ function getData() {
         $("#Humidity").html(Humidity);
         $("#Temperature").html(Temperature);
         $("#AirQuality").html(AirQualityIndex);
-        $("#BookingStatus").html(BookingStatus == "BookedUntil" ? "Booked Until" : BookingStatus);
+        $("#BookingStatus").html(BookingStatus == "BookedUntil" ? "Booked until" : BookingStatus);
         $("#BookingTime").html(BookingTime);
         $("#Software").html(Software);
         $("#ReleaseDate").html(ReleaseDate);
