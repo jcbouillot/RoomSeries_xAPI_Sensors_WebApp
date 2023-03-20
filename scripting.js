@@ -31,10 +31,10 @@ $(document).ready(function(){
 
 function getData() {
     var settings = {
-        url: "https://webexapis.com/v1/xapi/status?deviceId=Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL0RFVklDRS8zZTkzZWQ1Ni0yZTBhLTRiMGQtODcwMi0wNTE3OTcxNjhlYWY&name=*.*",
+        url: "https://webexapis.com/v1/xapi/status?deviceId=Y2lzY29zcGFyazovL3VybjpURUFNOnVzLWVhc3QtMl9hL0RFVklDRS8yN2NlYTQyYS00MjZhLTQxZjQtOTJlNS0zODNhNWFkMWJjY2Q=&name=*.*",
         method: "GET",
         timeout: 0,
-        headers: {Authorization: "Bearer YjU1NWY0YjEtNWU0Yi00YmEzLWJiMWMtYmI4NDQyMWY2NWRjMDE1ODgyOGEtODBj_P0A1_3f583651-ecd1-49e2-bf45-cf75e5f54d08",},
+        headers: {Authorization: "Bearer ZGJiMWQxNWUtOWE5OC00ZTM4LTlkNmItMzczY2U3MDM1NmY2OTQ0Y2NmNzYtMzhl_PF84_7d00d1be-dbb7-484c-8af8-5aee05d02e50",},
     };
 
     $.ajax(settings).done(function (response) {
@@ -60,7 +60,7 @@ function getData() {
         $("#Current").html(Current);
         $("#Capacity").html(Capacity);
         $("#Name").html(Name);
-         $("#Humidity").html(Humidity + "%");
+        $("#Humidity").html(Humidity + "%");
         $("#Temperature").html(Temperature + " °C");
         $("#AirQuality").html(AirQualityIndex + " TVOC");
         $("#BookingStatus").html(BookingStatus == "BookedUntil" ? "Booked until" : BookingStatus);
