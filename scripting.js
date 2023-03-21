@@ -44,12 +44,10 @@ function getData() {
         var PeoplePresence = response.result.RoomAnalytics.PeoplePresence;
         var Current = response.result.RoomAnalytics.PeopleCount.Current;
         var Capacity = response.result.RoomAnalytics.PeopleCount.Capacity;
-        var Name = response.result.UserInterface.ContactInfo.Name;
-//        var Humidity = response.result.Peripherals.ConnectedDevice[0].RoomAnalytics.RelativeHumidity;
-//        var Temperature = response.result.Peripherals.ConnectedDevice[0].RoomAnalytics.AmbientTemperature;
-//        var AirQualityIndex = response.result.Peripherals.ConnectedDevice[0].RoomAnalytics.AirQuality.Index;
-        var Humidity = response.result.RoomAnalytics.RelativeHumidity;
-        var Temperature = response.result.RoomAnalytics.AmbientTemperature;
+        var Name = response.result.SystemUnit.BroadcastName;
+        var Humidity = response.result.Peripherals.ConnectedDevice[0].RoomAnalytics.RelativeHumidity;
+        var Temperature = response.result.Peripherals.ConnectedDevice[0].RoomAnalytics.AmbientTemperature;
+        var AirQualityIndex = response.result.Peripherals.ConnectedDevice[0].RoomAnalytics.AirQuality.Index;
         var BookingStatus = response.result.Bookings.Availability.Status;
         var BookingTime = response.result.Bookings.Availability.TimeStamp;
         var Software = response.result.SystemUnit.Software.DisplayName;
@@ -64,7 +62,7 @@ function getData() {
         $("#Name").html(Name);
         $("#Humidity").html(Humidity + "%");
         $("#Temperature").html(Temperature + " °C");
-//        $("#AirQuality").html(AirQualityIndex + " TVOC");
+        $("#AirQuality").html(AirQualityIndex + " TVOC");
         $("#BookingStatus").html(BookingStatus == "BookedUntil" ? "Booked until" : BookingStatus);
         $("#BookingTime").html(BookingTime);
         $("#Software").html(Software);
