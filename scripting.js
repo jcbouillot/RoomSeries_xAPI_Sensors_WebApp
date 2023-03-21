@@ -48,8 +48,8 @@ function getData() {
 //        var Humidity = response.result.Peripherals.ConnectedDevice[0].RoomAnalytics.RelativeHumidity;
 //        var Temperature = response.result.Peripherals.ConnectedDevice[0].RoomAnalytics.AmbientTemperature;
 //        var AirQualityIndex = response.result.Peripherals.ConnectedDevice[0].RoomAnalytics.AirQuality.Index;
-        var Humidity = response.result.Peripherals.RoomAnalytics.RelativeHumidity;
-        var Temperature = response.result.Peripherals.RoomAnalytics.AmbientTemperature;
+        var Humidity = response.result.RoomAnalytics.RelativeHumidity;
+        var Temperature = response.result.RoomAnalytics.AmbientTemperature;
         var BookingStatus = response.result.Bookings.Availability.Status;
         var BookingTime = response.result.Bookings.Availability.TimeStamp;
         var Software = response.result.SystemUnit.Software.DisplayName;
